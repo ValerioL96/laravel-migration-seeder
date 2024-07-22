@@ -17,9 +17,9 @@ class TrainSeeder extends Seeder
 
         for ($i=0; $i < 40 ; $i++) {
             $train = new Train();
-            $train->azienda = $faker->words(4, true);
-            $train->stazione_di_partenza = $faker->words(4, true);
-            $train->stazione_di_arrivo = $faker->words(4, true);
+            $train->azienda = $faker->company(2, true);
+            $train->stazione_di_partenza = $faker->city(4, true);
+            $train->stazione_di_arrivo = $faker->city(4, true);
             $train->orario_di_partenza = "2024-07-18 06:00:00";
             $train->orario_di_arrivo = "2024-07-18 10:00:00";
             $train->codice_treno = $faker->randomNumber(6, true);
